@@ -3,14 +3,17 @@
 <c:import url="../layout/app.jsp">
 	<c:param name="content">
     	<h2>id：<c:out value="${task.id}" /> の編集ページ</h2>
+
         <form method="post" action="${pageContext.request.contextPath}/update">
     		<label for="content">タスク内容</label><br>
-    		<input name="content" value="${task.content}"><br>
+    		<input name="content" value="${task.content}"><br><br>
     		<button type="submit">登録</button>
     		<input type="hidden" name="_token" value="${_token}">
     	</form>
-    	<p><a href="#" onclick="confirmDestroy();">このメッセージを削除する</a></p>
-		<p><a href="${pageContext.request.contextPath}/index">一覧に戻る</a></p>
+    	<div>
+    		<p><a href="#" onclick="confirmDestroy();">このメッセージを削除する</a></p>
+			<p><a href="${pageContext.request.contextPath}/index">一覧に戻る</a></p>
+    	</div>
 		<form method="post" action="${pageContext.request.contextPath}/destroy">
 			<input type="hidden" name="_token" value="${_token}">
 		</form>
@@ -22,4 +25,4 @@
 			}
 		</script>
 	</c:param>
-</c:import>
+</c:import>d
