@@ -25,4 +25,4 @@
 			}
 		</script>
 	</c:param>
-</c:import>d
+</c:import>
